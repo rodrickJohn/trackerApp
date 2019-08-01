@@ -20,17 +20,17 @@ import {PromiseToCome} from '../../models/promise-to-come.model';
 export class HomePage implements OnInit {
 
   weeklyStatsBarChart = {
-    //title : {
-      //  text: 'Weekly summary',
-      //  subtext: ''
-    //},
     tooltip : {
         trigger: 'item'
     },
     legend: {
         data: [ 'Attended', 'Tracked', 'Missed'],
         x: 'right',
-        orient: 'vertical'
+        orient: 'horizontal',
+        textStyle: {fontFamily: 'Roboto', fontSize: 10},
+        itemGap: 5,
+        itemWidth: 10,
+        symbolRadius: 0
     },
     toolbox: {
        show : false,
@@ -57,7 +57,8 @@ export class HomePage implements OnInit {
     ],
     yAxis: [
       {
-        type: 'value'
+        type: 'value',
+        show: false
       }
     ],
     series: [
@@ -74,7 +75,7 @@ export class HomePage implements OnInit {
         type: 'bar',
         color: '#6BDBEF',
         barWidth: '20%',
-        data: [15, 6, 3, 4, 3, 0, 5]
+        data: [15, 6, 14, 4, 0, 10, 5]
       },
       {
         name: 'Missed',
@@ -87,10 +88,10 @@ export class HomePage implements OnInit {
   };
 
   dailyStatsDoughnutChart = {
-    //title : {
+    // title : {
       //  text: 'Todays Registry',
       //  subtext: ''
-    //},
+    // },
     tooltip: {
         trigger: 'item',
     },
@@ -108,7 +109,7 @@ export class HomePage implements OnInit {
                 emphasis: {
                     show: false,
                     textStyle: {
-                        fontSize: '30',
+                        fontSize: '10',
                         fontWeight: 'bold'
                     }
                 }
@@ -130,8 +131,6 @@ export class HomePage implements OnInit {
   constructor(private appService: AppService) {}
 
   ngOnInit() {
-    //this.appService.getCountTotal().subscribe(data => {
-      //this.countTotal = data;
-  //  });
+
   }
 }
