@@ -1,4 +1,0 @@
-# Don't track content of these folders
-~/Apps/capstone/server/node_modules/
-
-~/Apps/capstone/trackerApp/node_modules/
