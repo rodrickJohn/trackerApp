@@ -21,9 +21,9 @@ export class TrackingFormPage implements OnInit {
   constructor(private appService : AppService, public alertController: AlertController) { }
 
   ngOnInit() {
-    //this.appService.getPatientDetails(this.patient_ID).subscribe((data: PatientDetails[]) => {
-      //      this.patient_details = data;
-        //  });
+    this.appService.getPatientDetails(this.patient_ID).subscribe((data: PatientDetails[]) => {
+            this.patient_details = data;
+         });
   }
 
   async presentAlert() {
