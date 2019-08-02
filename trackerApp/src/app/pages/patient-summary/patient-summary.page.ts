@@ -4,7 +4,7 @@ import {AppService} from '../../services/app.service';
 import { Observable } from 'rxjs/Observable';
 
 import {PatientDetails} from '../../models/patient-details.model';
-import {VisitRegistries} from '../../models/visit-registries.model'
+import {VisitRegistries} from '../../models/visit-registries.model';
 
 import { ActivatedRoute } from "@angular/router";
 

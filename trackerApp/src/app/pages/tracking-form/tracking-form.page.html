@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Form</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>CTC Tracking Form</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Patient_ID: 07-01-0100-32984</p>
+      <p>Date of birth: Aug 29, 1983</p>
+      <p>Sex: M</p>
+      <p>Division: </p>
+      <p>Ward: Namtumbo</p>
+      <p>Patient current status: ART <p>
+      <p>Most recent visit: Oct 13, 2019</p>
+      <p>Appointment date: Oct 13, 2019</p>
+
+      <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>Follow up outcome</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>Attending this clinic</ion-label>
+            <ion-radio slot="start" value="Attending" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Loss to follow up</ion-label>
+            <ion-radio slot="start" value="LTF" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Transfered to another clinic</ion-label>
+            <ion-radio slot="start" value="Transfer"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Opted out</ion-label>
+            <ion-radio slot="start" value="Opted Out"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Death</ion-label>
+            <ion-radio slot="start" value="Death"></ion-radio>
+          </ion-item>
+          <ion-button expand="block" (click)=presentAlert()>Submit</ion-button>
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

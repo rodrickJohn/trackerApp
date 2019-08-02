@@ -32,6 +32,9 @@ const routes: Routes = [
   },
   {
     path: 'appointment-summary/:patient_ID', loadChildren: './pages/appointment-summary/appointment-summary.module#AppointmentSummaryPageModule'
+  },
+  {
+    path: 'tracking-form', loadChildren: './pages/tracking-form/tracking-form.module#TrackingFormPageModule'
   }
 ];
 
